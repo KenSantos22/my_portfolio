@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ken Santos — Computer Science student, dancer, and choreographer.">
+    <title>Ken Santos | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700;800&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <a href="#home" class="logo">KS.</a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#dimensions">My Dimensions</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero" id="home">
+        <div class="hero-content reveal">
+            <div class="eyebrow">WELCOME TO MY WORLD — 2026</div>
+
+            <h1>KEN <span>SANTOS</span></h1>
+
+            <p class="hero-desc">
+                A Computer Science student, dancer, and choreographer.
+                Exploring the connection between technology, creativity,
+                and movement.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#works" class="btn">VIEW MY WORKS ↗</a>
+                <a href="#about" class="text-link">MORE ABOUT ME ↓</a>
+            </div>
+        </div>
+
+        <div class="hero-image reveal">
+            <!-- Replace with your own portrait: images/profile.jpg -->
+            <img src="image/2.jpeg" alt="Ken Santos portrait"
+                 onerror="this.src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=900'">
+            <div class="image-label">CREATIVE MIND — 001</div>
+        </div>
+    </header>
+
+    <!-- MOVING TEXT -->
+    <div class="marquee" aria-label="Design, create, develop, dance, repeat">
+        <div class="marquee-track">
+            DESIGN • CREATE • DEVELOP • DANCE • REPEAT •
+            DESIGN • CREATE • DEVELOP • DANCE • REPEAT •
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-top reveal">
+            <div>
+                <div class="section-number">01 / WHO AM I?</div>
+                <h2 class="section-title">ABOUT ME</h2>
+            </div>
+            <div class="section-note">GET TO KNOW ME</div>
+        </div>
+
+        <div class="about">
+            <div class="about-image reveal">
+                <!-- Replace with another photo: images/about.jpg -->
+                <img src="image/12.jpg" alt="Ken Santos"
+                     onerror="this.src='https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900'">
+            </div>
+
+            <div class="about-content reveal">
+                <h3>HELLO, I'M KEN.</h3>
+                <p>
+                    I'm Ken Santos, a Computer Science student interested in
+                    technology, web development, and creative design. I enjoy
+                    learning new things and turning ideas into something useful.
+                </p>
+                <p>
+                    Outside technology, I spend my time dancing and creating
+                    choreography. These experiences help me develop creativity,
+                    discipline, teamwork, and confidence.
+                </p>
+
+                <div class="about-details">
+                    <div class="detail"><small>NAME</small><strong>Ken Santos</strong></div>
+                    <div class="detail"><small>FIELD</small><strong>Computer Science</strong></div>
+                    <div class="detail"><small>CREATIVE SIDE</small><strong>Dancer & Choreographer</strong></div>
+                    <div class="detail"><small>INTERESTS</small><strong>Technology & Hip-Hop</strong></div>
+                </div>
+
+                <div class="about-actions">
+                    <!-- Put your resume PDF inside the project folder and name it resume.pdf -->
+                    <a class="btn" href="pdf/resume.pdf" target="_blank" rel="noopener">VIEW / DOWNLOAD RESUME ↗</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CERTIFICATES -->
+        <div class="certificates-block reveal">
+            <div class="subsection-heading">
+                <span class="section-number">DOCUMENTS & ACHIEVEMENTS</span>
+                <h3>CERTIFICATES & WORKS</h3>
+                <p>Add your certificates here. Replace the sample file names with your actual files.</p>
+            </div>
+
+            <div class="certificate-grid">
+                <a class="certificate-card" href="pdf/Bartending.jpg" target="_blank" rel="noopener">
+                    <div class="certificate-icon">01</div>
+                    <div>
+                        <h4>Certificate 01</h4>
+                        <p>Bartending NCII</p>
+                        <span>VIEW CERTIFICATE ↗</span>
+                    </div>
+                </a>
+
+                <a class="certificate-card" href="pdf/CertificateNetiquet.pdf" target="_blank" rel="noopener">
+                    <div class="certificate-icon">02</div>
+                    <div>
+                        <h4>Certificate 02</h4>
+                        <p>Certificate Netiquette</p>
+                        <span>VIEW CERTIFICATE ↗</span>
+                    </div>
+                </a>
+
+                  <a class="certificate-card" href="image/balaitiarjud.jpg" target="_blank" rel="noopener">
+                    <div class="certificate-icon">02</div>
+                    <div>
+                        <h4>WORK 01</h4>
+                        <p>balai ti arjud</p>
+                        <span>VIEW WORK ↗</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MY DIMENSIONS -->
+    <section class="dimensions-section" id="dimensions">
+        <div class="section-top reveal">
+            <div>
+                <div class="section-number">02 / DIFFERENT SIDES OF ME</div>
+                <h2 class="section-title">MY DIMENSIONS</h2>
+            </div>
+            <div class="section-note">THREE ROLES. ONE IDENTITY.</div>
+        </div>
+
+        <div class="dimensions-grid">
+            <article class="dimension-card reveal">
+                <span class="dimension-number">01</span>
+                <div class="dimension-tag">MOVEMENT & EXPRESSION</div>
+                <h3>THE DANCER</h3>
+                <p>
+                    Dance is one of my ways of expressing myself. Through
+                    hip-hop, I continue to build confidence, discipline,
+                    musicality, and stage presence.
+                </p>
+            </article>
+
+            <article class="dimension-card reveal">
+                <span class="dimension-number">02</span>
+                <div class="dimension-tag">VISION & CREATION</div>
+                <h3>THE CHOREOGRAPHER</h3>
+                <p>
+                    I create hip-hop routines, plan formations, and help guide
+                    dancers during rehearsals and performances. I enjoy turning
+                    ideas and music into movement.
+                </p>
+            </article>
+
+            <article class="dimension-card reveal">
+                <span class="dimension-number">03</span>
+                <div class="dimension-tag">LOGIC & TECHNOLOGY</div>
+                <h3>THE CS STUDENT</h3>
+                <p>
+                    As a Computer Science student, I explore programming,
+                    web development, and digital solutions while continuously
+                    improving my technical skills.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <!-- WORKS: CHOREOGRAPHY VIDEOS -->
+    <section id="works">
+        <div class="section-top reveal">
+            <div>
+                <div class="section-number">03 / SELECTED WORKS</div>
+                <h2 class="section-title">MY WORKS</h2>
+            </div>
+            <div class="section-note">CHOREOGRAPHY & CREATIVE PROJECTS</div>
+        </div>
+
+        <p class="works-intro reveal">
+            A collection of choreography, dance performances, and creative work.
+            Replace the sample videos with your own recordings.
+        </p>
+
+        <div class="works-grid">
+            <article class="work-card reveal">
+                <div class="video-wrap">
+                    <!-- Add your video as videos/choreo-1.mp4 -->
+                    <video controls preload="metadata" poster="image/3.jpeg">
+                        <source src="video/15.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                </div>
+                <div class="work-info">
+                    <div><span>01 / CHOREOGRAPHY</span><h3>CHOREO VIDEO 01</h3></div>
+                    <p>HIP-HOP</p>
+                </div>
+            </article>
+
+            <article class="work-card reveal">
+                <div class="video-wrap">
+                    <!-- Add your video as videos/choreo-2.mp4 -->
+                    <video controls preload="metadata" poster="image/13.jpg">
+                        <source src="video/14.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                </div>
+                <div class="work-info">
+                    <div><span>02 / PERFORMANCE</span><h3>CHOREO VIDEO 02</h3></div>
+                    <p>PERFORMANCE</p>
+                </div>
+            </article>
+            
+        </div>
+        <p class="small-note reveal">
+            
+        </p>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="gallery">
+        <div class="section-top reveal">
+            <div>
+                <div class="section-number">04 / MOMENTS</div>
+                <h2 class="section-title">GALLERY</h2>
+            </div>
+            <div class="section-note">LIFE IN FRAMES</div>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item reveal"><img src="image/5.jpeg" alt="Gallery photo 1" onerror="this.src='https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=700'"></div>
+            <div class="gallery-item reveal"><img src="image/6.jpeg" alt="Gallery photo 2" onerror="this.src='https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=700'"></div>
+            <div class="gallery-item reveal"><img src="image/7.jpeg" alt="Gallery photo 3" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700'"></div>
+            <div class="gallery-item reveal"><img src="image/8.jpeg" alt="Gallery photo 4" onerror="this.src='https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=700'"></div>
+            <div class="gallery-item reveal"><img src="image/9.jpeg" alt="Gallery photo 5" onerror="this.src='https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=700'"></div>
+            <div class="gallery-item reveal"><img src="image/10.jpeg" alt="Gallery photo 6" onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700'"></div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="section-number">05 / LET'S CONNECT</div>
+        <h2>LET'S WORK<br>TOGETHER.</h2>
+        <p>Have a project, collaboration, or idea? Let's connect.</p>
+
+        <!-- Replace with your real email address -->
+        <a href="mailto:your-kensantos119@.com" class="contact-btn">GET IN TOUCH ↗</a>
+
+        <div class="socials">
+            <!-- Replace # with your actual profile links -->
+            <a href="#" target="_blank" rel="noopener">Ken Santos ↗</a>
+            <a href="#" target="_blank" rel="noopener">Kennie.2 ↗</a>
+            <a href="#" target="_blank" rel="noopener">https://kensantos22.github.io/ ↗</a>
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2026 KEN SANTOS</span>
+        <span>DESIGNED WITH CREATIVITY.</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
