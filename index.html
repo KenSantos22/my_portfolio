@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Ken Santos — Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- NAVIGATION -->
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="#">Portfolio</a>
+                <a href="#">Ken Santos</a>
             </div>
 
             <button class="menu-btn" id="menuBtn"
@@ -20,12 +22,132 @@
             </button>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#dimensions">Dimensions</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">PORTFOLIO / 2026</p>
+            <h1>Developer <span>& Creator</span></h1>
+            <p class="hero-desc">Building responsive web apps, desktop tools, and bringing high-energy performance concepts to life.</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn">EXPLORE WORK</a>
+                <a href="#contact" class="text-link">GET IN TOUCH →</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="path-to-your-image.jpg" alt="Ken Santos">
+            <div class="image-label">BSCS STUDENT</div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee">
+        <div class="marquee-track">
+            SOFTWARE DEVELOPER &nbsp;&bull;&nbsp; CHOREOGRAPHER &nbsp;&bull;&nbsp; CREATIVE CODER &nbsp;&bull;&nbsp; SOFTWARE DEVELOPER &nbsp;&bull;&nbsp; CHOREOGRAPHER &nbsp;&bull;&nbsp;
+        </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="section-top">
+            <div>
+                <span class="section-number">01 — ABOUT ME</span>
+                <h2 class="section-title">Background & Stack</h2>
+            </div>
+            <p class="section-note">Based in Bangued, Abra</p>
+        </div>
+
+        <div class="about">
+            <div class="about-image">
+                <img src="path-to-your-about-image.jpg" alt="About Ken">
+            </div>
+            <div class="about-content">
+                <h3>Technical & Creative Roots</h3>
+                <p>Merging logic-driven computer science principles with expressive design and choreography. Experienced across desktop and web environments using modern code architectures.</p>
+                
+                <div class="about-details">
+                    <div class="detail">
+                        <small>EDUCATION</small>
+                        <strong>BS Computer Science</strong>
+                    </div>
+                    <div class="detail">
+                        <small>STACK</small>
+                        <strong>PHP, MySQL, VB.NET</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CERTIFICATES / SKILLS BLOCK -->
+        <div class="certificates-block">
+            <div class="subsection-heading">
+                <span class="section-number">EXPERTISE</span>
+                <h3>Core Competencies</h3>
+                <p>Technologies and systems applied in development projects.</p>
+            </div>
+
+            <div class="certificate-grid">
+                <div class="certificate-card">
+                    <div class="certificate-icon">01</div>
+                    <div>
+                        <h4>Web Dev</h4>
+                        <p>Full-stack web pages, database-backed user systems, and responsive deployment.</p>
+                        <span>PHP / MySQL / HTML / CSS</span>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">02</div>
+                    <div>
+                        <h4>Desktop Apps</h4>
+                        <p>Windows desktop utilities, database interfaces, and CRUD record tools.</p>
+                        <span>Visual Basic .NET / SQL Server</span>
+                    </div>
+                </div>
+
+                <div class="certificate-card">
+                    <div class="certificate-icon">03</div>
+                    <div>
+                        <h4>Choreography</h4>
+                        <p>Custom large-group formation staging, blocking, and music track editing.</p>
+                        <span>FL Studio / Performance Art</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIMENSIONS SECTION -->
+    <section id="dimensions" class="dimensions-section">
+        <div class="section-top">
+            <div>
+                <span class="section-number">02 — DIMENSIONS</span>
+                <h2 class="section-title">What Drives Me</h2>
+            </div>
+        </div>
+
+        <div class="dimensions-grid">
+            <div class="dimension-card">
+                <div class="dimension-number">01</div>
+                <div class="dimension-tag">DEVELOPMENT</div>
+            </div>
+            <div class="dimension-card">
+                <div class="dimension-number">02</div>
+                <div class="dimension-tag">CHOREOGRAPHY</div>
+            </div>
+            <div class="dimension-card">
+                <div class="dimension-number">03</div>
+                <div class="dimension-tag">CREATIVE DIRECTION</div>
+            </div>
+        </div>
+    </section>
+
 </body>
 </html>
