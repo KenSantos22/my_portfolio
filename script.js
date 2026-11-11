@@ -1,101 +1,145 @@
 
-// ===============================
-// MOBILE MENU
-// ===============================
-const menuToggle = document.querySelector("#menu-toggle");
-const navLinks = document.querySelector("#nav-links");
+// KEN SANTOS PORTFOLIO
 
-if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-        menuToggle.classList.toggle("active");
-    });
-}
+document.addEventListener("DOMContentLoaded", () => {
 
-// Close menu after clicking a navigation link
-document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks?.classList.remove("active");
-        menuToggle?.classList.remove("active");
-    });
-});
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+    const navItems = document.querySelectorAll(".nav-links a");
 
-// ===============================
-// SCROLL REVEAL ANIMATION
-// ===============================
-const revealElements = document.querySelectorAll(
-    ".reveal, .section, .dimension-card, .work-card, .gallery-item"
-);
+    // MOBILE NAVIGATION
+    if (menuBtn && navLinks) {
 
-const revealObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.15
-});
+        menuBtn.addEventListener("click", () => {
 
-revealElements.forEach(element => {
-    element.classList.add("reveal");
-    revealObserver.observe(element);
-});
+            const isOpen = navLinks.classList.toggle("open");
 
-// ===============================
-// ACTIVE NAVIGATION ON SCROLL
-// ===============================
-const sections = document.querySelectorAll("section[id]");
-const navigationLinks = document.querySelectorAll(".nav-link");
+            menuBtn.setAttribute("aria-expanded", String(isOpen));
 
-window.addEventListener("scroll", () => {
-    let currentSection = "";
+            menuBtn.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation" : "Open navigation"
+            );
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 150;
-        const sectionHeight = section.offsetHeight;
+            menuBtn.textContent = isOpen ? "✕" : "☰";
 
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-            currentSection = section.getAttribute("id");
-        }
-    });
+        });
 
-    navigationLinks.forEach(link => {
-        link.classList.remove("active");
+        // Close menu after clicking a navigation link
+        navItems.forEach((link) => {
 
-        if (link.getAttribute("href") === `#${currentSection}`) {
-            link.classList.add("active");
-        }
-    });
-});
+            link.addEventListener("click", () => {
 
-// ===============================
-// SMOOTH SCROLL
-// ===============================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (event) {
-        const target = document.querySelector(this.getAttribute("href"));
+                navLinks.classList.remove("open");
 
-        if (target) {
-            event.preventDefault();
+                menuBtn.setAttribute("aria-expanded", "false");
+                menuBtn.setAttribute("aria-label", "Open navigation");
 
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
+                menuBtn.textContent = "☰";
+
             });
-        }
-    });
+
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (event) => {
+
+            if (
+                !navLinks.contains(event.target) &&
+                !menuBtn.contains(event.target)
+            ) {
+
+                navLinks.classList.remove("open");
+
+                menuBtn.setAttribute("aria-expanded", "false");
+                menuBtn.setAttribute("aria-label", "Open navigation");
+
+                menuBtn.textContent = "☰";
+
+            }
+
+        });
+
+    }
+
+    // SCROLL REVEAL ANIMATION
+    if ("IntersectionObserver" in window) {
+
+        document.body.classList.add("js-ready");
+
+        const observer = new IntersectionObserver(
+            (entries, currentObserver) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("visible");
+
+                        currentObserver.unobserve(entry.target);
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.12
+            }
+        );
+
+        document.querySelectorAll(".reveal").forEach((element) => {
+
+            observer.observe(element);
+
+        });
+
+    }
+
+    // ACTIVE NAVIGATION WHILE SCROLLING
+    const sections = document.querySelectorAll(
+        "header[id], section[id]"
+    );
+
+    if (
+        "IntersectionObserver" in window &&
+        sections.length
+    ) {
+
+        const sectionObserver = new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        const activeId = entry.target.id;
+
+                        navItems.forEach((link) => {
+
+                            link.classList.toggle(
+                                "active",
+                                link.getAttribute("href") === `#${activeId}`
+                            );
+
+                        });
+
+                    }
+
+                });
+
+            },
+            {
+                rootMargin: "-35% 0px -55% 0px"
+            }
+        );
+
+        sections.forEach((section) => {
+
+            sectionObserver.observe(section);
+
+        });
+
+    }
+
 });
-
-// ===============================
-// CURRENT YEAR
-// ===============================
-const yearElement = document.querySelector("#year");
-
-if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-}
